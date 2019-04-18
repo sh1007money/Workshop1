@@ -30,31 +30,37 @@
                         </li>
                         <li>
                             <label class="required">圖書類別</label>
-                            <select id="book_category"></select>
+                            <select id="book_category" data-bind="="value:BookCategory" style="width:100%"></select>
+                            <span class="k-invalid-msg" data-for="book_category"></span>
                         </li>
                         <li>
                             <label class="required">書名</label>
-                            <input id="book_name" type="text" />
+                            <input id="book_name" name="book_name" data-bind="value:bookName" type="text" />
+                            <span class="k-invalid-msg" data-for="book_name"></span>
                         </li>
                         <li>
                             <label class="required">作者</label>
-                            <input id="book_author" type="text" />
+                            <input id="book_author" name="book_author" data-bind="value:BookAuthor" type="text" />
+                            <span class="k-invalid-msg" data-for="book_author"></span>
                         </li>
                         <li>
                             <label class="required">購買日期</label>
-                            <input id="bought_datepicker"/>
+                            <input type="date" id="bought_datepicker" name="bought_datepicker" data-bind="value:BookBoughtDate" />
+                            <span class="k-invalid-msg" data-for="bought_datepicker"></span>
                         </li>
                         <li>
                             <label>送達日期</label>
-                            <input id="delivered_datepicker" />
+                            <input type="date" id="delivered_datepicker" name="delivered_datepicker" data-bind="value:BookDeliveredDate" />
                         </li>
                         <li>
                             <label class="required">金額</label>
-                            <input id="book_price" type="text"/>
+                            <input id="book_price" name="book_price" data-bind="value:BookPrice" type="text" class="k-textbox"/>
+                            <span class="k-invalid-msg" data-for="book_price"></span>
                         </li>
                         <li>
                             <label class="required">數量</label>
-                            <input id="book_amount" type="text" />
+                            <input id="book_amount" name="book_amount" data-bind="value:BookAmount" class="k-textbox" type="text" />
+                            <span class="k-invalid-msg" data-for="book_amount"></span>
                         </li>
                         <li>
                             <span>
@@ -73,6 +79,8 @@
         </div>
     </main>
     <footer></footer>
+    <script id="BookDeliveredDate-templte" type="text/x-kendo-template">
+
     <script type="text/javascript" src="data/book-data.js"></script>
     <script src="./js/jquery-2.1.4.min.js"></script>
     <script src="./js/kendo.all.min.js"></script>
